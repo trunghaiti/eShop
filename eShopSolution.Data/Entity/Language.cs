@@ -1,0 +1,14 @@
+﻿using eShopSolution.Data.Enums;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace eShopSolution.Data.Entity
+{
+    public class Language
+    {
+        public int Id { set; get; }
+        public string Name { set; get; }
+        public Status IsDefault { set; get; }
+    }
+}
