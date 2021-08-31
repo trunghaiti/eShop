@@ -7,7 +7,7 @@ namespace eShopSolution.Data.Entity
 {
     public class Language
     {
-        public int Id { set; get; }
+        public string Id { set; get; }
         public string Name { set; get; }
         public Status IsDefault { set; get; }
 

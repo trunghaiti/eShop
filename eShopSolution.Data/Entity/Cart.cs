@@ -10,6 +10,7 @@ namespace eShopSolution.Data.Entity
         public int ProductId { set; get; }
         public int Quantity { set; get; }
         public decimal Price { set; get; }
+        public DateTime CreatedDate { get; set; }
 
         public Product Product { set; get; }
     }
