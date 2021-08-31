@@ -12,6 +12,9 @@ namespace eShopSolution.Data.Entity
         public decimal Price { set; get; }
         public DateTime CreatedDate { get; set; }
 
+        public Guid UserId { set; get; }
+
+        public AppUser AppUser { set; get; }
         public Product Product { set; get; }
     }
 }

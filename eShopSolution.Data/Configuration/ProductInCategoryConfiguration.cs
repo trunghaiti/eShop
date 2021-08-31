@@ -15,9 +15,8 @@ namespace eShopSolution.Data.Configuration
             
             builder.HasKey(x => new { x.CategoryId, x.ProductId });
 
-            builder.HasOne(x => x.Product).WithMany(y => y.ProductInCategories).HasForeignKey(y => y.ProductId);
-
-            builder.HasOne(x => x.Category).WithMany(y => y.ProductInCategories).HasForeignKey(y => y.CategoryId);
+            builder.HasOne(x => x.Product).WithMany(x => x.ProductInCategories).HasForeignKey(x => x.ProductId);
+            builder.HasOne(x => x.Category).WithMany(x => x.ProductInCategories).HasForeignKey(x => x.CategoryId);
         }
     }
 }
