@@ -4,13 +4,14 @@ using System.Text;
 
 namespace eShopSolution.Data.Entity
 {
-    public class Cart
+    public class ProductInCategory
     {
-        public int Id { set; get; }
         public int ProductId { set; get; }
-        public int Quantity { set; get; }
-        public decimal Price { set; get; }
-
+        
         public Product Product { set; get; }
+
+        public int CategoryId { set; get; }
+
+        public Category Category { set; get; }
     }
 }

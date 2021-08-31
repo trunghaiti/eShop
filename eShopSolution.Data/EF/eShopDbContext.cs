@@ -3,20 +3,32 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using eShopSolution.Data.Entity;
+using eShopSolution.Data.Configuration;
 
 namespace eShopSolution.Data.EF
 {
-    public class eShopDbContext : DbContext
+    public class EShopDbContext : DbContext
     {
-        public eShopDbContext(DbContextOptions options) : base(options)
+        public EShopDbContext(DbContextOptions options) : base(options)
         {
             
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            optionsBuilder.UseSqlServer(
-                @"Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True");
+
+            modelBuilder.ApplyConfiguration(new CartConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new CategoryTranslationConfiguration());
+            modelBuilder.ApplyConfiguration(new ContactConfiguration());
+            modelBuilder.ApplyConfiguration(new LanguageConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductInCategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
+            modelBuilder.ApplyConfiguration(new PromotionConfiguration());
+            //base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Cart> Carts { set; get; }
@@ -27,8 +39,9 @@ namespace eShopSolution.Data.EF
         public DbSet<Order> Orders { set; get; }
         public DbSet<OrderDetail> OrderDetails { set; get; }
         public DbSet<Product> Products { set; get; }
+        public DbSet<ProductInCategory> ProductInCategories { set; get; }
         public DbSet<ProductTranslation> ProductTranslations { set; get; }
         public DbSet<Promotion> Promotions { set; get; }
-        public DbSet<SystemActivity> SystemActivities { set; get; }
+        
     }
 }

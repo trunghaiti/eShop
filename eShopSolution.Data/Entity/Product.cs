@@ -16,5 +16,11 @@ namespace eShopSolution.Data.Entity
         public int ViewCount { set; get; }
         public DateTime CreatedDate { set; get; }
         public string SeoAlias { set; get; }
+
+        public List<ProductInCategory> ProductInCategories { set; get; }
+        public List<OrderDetail> OrderDetails { set; get; }
+        public List<Cart> Carts { set; get; }
+        public List<ProductTranslation> ProductTranslations { set; get; }
+        public List<Promotion> Promotions { set; get; }
     }
 }

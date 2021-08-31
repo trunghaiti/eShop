@@ -11,9 +11,11 @@ namespace eShopSolution.Data.Entity
         public DateTime OrderDate { set; get; }
         public int UserId { set; get; }
         public string ShipName { set; get; }
-        public string ShihpAddress { set; get; }
-        public string ShihpEmail { set; get; }
-        public string ShihpPhoneNumber { set; get; }
+        public string ShipAddress { set; get; }
+        public string ShipEmail { set; get; }
+        public string ShipPhoneNumber { set; get; }
         public Status Status { set; get; }
+
+        public List<OrderDetail> OrderDetails { set; get; }
     }
 }
