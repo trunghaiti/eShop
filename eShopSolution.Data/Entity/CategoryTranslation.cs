@@ -10,8 +10,8 @@ namespace eShopSolution.Data.Entity
         public int CategoryId { set; get; }
         public string Name { set; get; }
         public string SeoDescription { set; get; }
-        public int SeoTitle { set; get; }
-        public int LanguageId { set; get; }
+        public string SeoTitle { set; get; }
+        public string LanguageId { set; get; }
         public string SeoAlias { set; get; }
 
         public Category Category { set; get; }

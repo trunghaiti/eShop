@@ -26,7 +26,7 @@ namespace eShopSolution.Data.Configuration
 
             builder.Property(x => x.OriginalPrice).IsRequired(true).HasDefaultValue(0);
 
-            builder.Property(x => x.SeoAlias).IsRequired().HasMaxLength(2250).IsUnicode(false);
+        
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eShopSolution.Data.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,9 +16,8 @@ namespace eShopSolution.Data.Entity
         public int Stock { set; get; }
         public int ViewCount { set; get; }
         public DateTime CreatedDate { set; get; }
-        public string SeoAlias { set; get; }
         public bool? IsFeatured { get; set; }
-
+        
         public List<ProductInCategory> ProductInCategories { set; get; }
         public List<OrderDetail> OrderDetails { set; get; }
         public List<Cart> Carts { set; get; }

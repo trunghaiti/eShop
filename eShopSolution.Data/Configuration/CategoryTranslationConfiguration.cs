@@ -22,6 +22,8 @@ namespace eShopSolution.Data.Configuration
 
             builder.Property(x => x.SeoAlias).HasMaxLength(250);
 
+            builder.Property(x => x.LanguageId).IsRequired().IsUnicode(false).HasMaxLength(5);
+
             builder.HasOne(x => x.Category).WithMany(x => x.CategoryTranslations);
             builder.HasOne(x => x.Language).WithMany(x => x.CategoryTranslations);
         }

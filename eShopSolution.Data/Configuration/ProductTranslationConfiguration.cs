@@ -22,7 +22,7 @@ namespace eShopSolution.Data.Configuration
             
             builder.Property(x => x.Detail).IsRequired().HasMaxLength(250);
 
-            builder.Property(x => x.SeoDescription).IsRequired().HasMaxLength(250);
+            builder.Property(x => x.SeoAlias).IsRequired().HasMaxLength(250);
 
             builder.Property(x => x.SeoTitle).IsRequired().IsUnicode(false).HasMaxLength(250);
 

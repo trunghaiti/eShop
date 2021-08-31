@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using eShopSolution.Data.Entity;
 using eShopSolution.Data.Configuration;
+using eShopSolution.Data.Extensions;
 
 namespace eShopSolution.Data.EF
 {
@@ -16,6 +17,7 @@ namespace eShopSolution.Data.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Configure using Fulent API
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             modelBuilder.ApplyConfiguration(new CartConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
@@ -31,6 +33,9 @@ namespace eShopSolution.Data.EF
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new SlideConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+
+            //data seeding
+            modelBuilder.Seed(); 
             //base.OnModelCreating(modelBuilder);
         }
 

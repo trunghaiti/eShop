@@ -19,7 +19,7 @@ namespace eShopSolution.Data.Configuration
 
             builder.Property(x => x.Name).IsRequired().HasMaxLength(250);
 
-            builder.Property(x => x.IsDefault).HasDefaultValue(Status.Active);
+            builder.Property(x => x.IsDefault).HasDefaultValue(false);
 
 
         }

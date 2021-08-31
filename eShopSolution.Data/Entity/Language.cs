@@ -9,7 +9,7 @@ namespace eShopSolution.Data.Entity
     {
         public string Id { set; get; }
         public string Name { set; get; }
-        public Status IsDefault { set; get; }
+        public bool IsDefault { set; get; }
 
         public List<CategoryTranslation> CategoryTranslations { set; get; }
         public List<ProductTranslation> ProductTranslations { set; get; }
